@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Display Property Example</title>
+  <style>
+    p {
+      color: white;
+    }
+
+    .block {
+      display: block;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      margin-bottom: 10px;
+    }
+
+    .inline {
+      display: inline;
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      margin-right: 10px;
+    }
+
+    .inline-block {
+      display: inline-block;
+      width: 150px;
+      height: 150px;
+      background-color: blue;
+      margin-right: 10px;
+    }
+
+    .input-group {
+      margin-top: 10px;
+    }
+
+    .slider-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .slider-label {
+      margin-right: 10px;
+    }
+
+    .slider {
+      flex: 1;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 5px;
+      background-color: #ddd;
+      outline: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 15px;
+      height: 15px;
+      background-color: #666;
+      cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+      width: 15px;
+      height: 15px;
+      background-color: #666;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body><h1>CSS Display Property</h1>
+  <p class="block">Block Paragraph </p>
+  <p class="inline">Inline Paragraph
+  </p>
+  <p class="inline-block">Inline-Block Paragraph</p>
+
+  <div class="input-group">
+    <div class="slider-group">
+      <label class="slider-label" for="block-height-slider">Block Height:</label>
+      <input type="range" id="block-height-slider" min="100" max="2000" value="200" class="slider">
+      <output id="block-height-output">200</output>
+    </div>
+    <div class="slider-group">
+      <label class="slider-label" for="block-width-slider">Block Width:</label>
+      <input type="range" id="block-width-slider" min="100" max="2000" value="200" class="slider">
+      <output id="block-width-output">200</output>
+    </div>
+  </div>
+
+  <div class="input-group">
+    <div class="slider-group">
+      <label class="slider-label" for="inline-height-slider">Inline Height:</label>
+      <input type="range" id="inline-height-slider" min="100" max="2000" value="200" class="slider">
+      <output id="inline-height-output">100</output>
+    </div>
+    <div class="slider-group">
+      <label class="slider-label" for="inline-width-slider">Inline Width:</label>
+      <input type="range" id="inline-width-slider" min="100" max="2000" value="200" class="slider">
+      <output id="inline-width-output">100</output>
+    </div>
+  </div>
+
+  <div class="input-group">
+    <div class="slider-group">
+      <label class="slider-label" for="inline-block-height-slider">Inline-Block Height:</label>
+      <input type="range" id="inline-block-height-slider" min="100" max="2000" value="200" class="slider">
+      <output id="inline-block-height-output">150</output>
+    </div>
+    <div class="slider-group">
+      <label class="slider-label" for="inline-block-width-slider">Inline-Block Width:</label>
+      <input type="range" id="inline-block-width-slider" min="100" max="2000" value="200" class="slider">
+      <output id="inline-block-width-output">150</output>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
